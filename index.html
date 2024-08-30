@@ -1,151 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Website</title>
+    <title>French Language Learning</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Welcome to Your French Learning Hub</h1>
+        <h1>Learn French Alphabets</h1>
     </header>
 
-   <section class="video-section">
-        <h2>Video Lecture: Basic Greetings and Self-Introduction in French</h2>
+    <section id="video-lecture">
+        <h2>Video Lecture</h2>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Ro3iiwRiTqY?si=hcnTRJQ7OcNa6UaF" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YmYf4kw-8bo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
     </section>
 
-    <section class="quiz-section">
-        <h2>Quiz: Test Your Knowledge</h2>
-        <form id="quizForm">
-            <!-- Quiz Questions -->
-            <div class="question">
-                <p>1. How do you say "Hello" in French?</p>
-                <label><input type="radio" name="q1" value="A"> A) Hola</label>
-                <label><input type="radio" name="q1" value="B"> B) Bonjour</label>
-                <label><input type="radio" name="q1" value="C"> C) Guten Tag</label>
-                <label><input type="radio" name="q1" value="D"> D) Ciao</label>
-                <label><input type="radio" name="q1" value="E"> E) Salut</label>
+    <section id="quiz-section">
+        <h2>Test Your Knowledge</h2>
+        <div class="quiz-container">
+            <!-- Quiz 1 -->
+            <div class="quiz" id="quiz1">
+                <h3>Quiz 1: What is the first letter of the French alphabet?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'A', 'quiz1')">A. A</li>
+                    <li onclick="checkAnswer(this, 'B', 'quiz1')">B. B</li>
+                    <li onclick="checkAnswer(this, 'C', 'quiz1')">C. C</li>
+                    <li onclick="checkAnswer(this, 'D', 'quiz1')">D. D</li>
+                    <li onclick="checkAnswer(this, 'E', 'quiz1')">E. E</li>
+                </ul>
+                <div class="result" id="result-quiz1"></div>
             </div>
 
-            <div class="question">
-                <p>2. What does "Merci" mean?</p>
-                <label><input type="radio" name="q2" value="A"> A) Goodbye</label>
-                <label><input type="radio" name="q2" value="B"> B) Please</label>
-                <label><input type="radio" name="q2" value="C"> C) Thank you</label>
-                <label><input type="radio" name="q2" value="D"> D) Hello</label>
-                <label><input type="radio" name="q2" value="E"> E) Sorry</label>
+            <!-- Quiz 2 -->
+            <div class="quiz" id="quiz2">
+                <h3>Quiz 2: What letter comes after 'A'?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'B', 'quiz2')">A. A</li>
+                    <li onclick="checkAnswer(this, 'B', 'quiz2')">B. B</li>
+                    <li onclick="checkAnswer(this, 'C', 'quiz2')">C. C</li>
+                    <li onclick="checkAnswer(this, 'D', 'quiz2')">D. D</li>
+                    <li onclick="checkAnswer(this, 'E', 'quiz2')">E. E</li>
+                </ul>
+                <div class="result" id="result-quiz2"></div>
             </div>
 
-            <div class="question">
-                <p>3. How do you say "My name is" in French?</p>
-                <label><input type="radio" name="q3" value="A"> A) Je m'appelle</label>
-                <label><input type="radio" name="q3" value="B"> B) Mi nombre es</label>
-                <label><input type="radio" name="q3" value="C"> C) Ich heiße</label>
-                <label><input type="radio" name="q3" value="D"> D) Io mi chiamo</label>
-                <label><input type="radio" name="q3" value="E"> E) Nama saya</label>
+            <!-- Quiz 3 -->
+            <div class="quiz" id="quiz3">
+                <h3>Quiz 3: Which letter is not a vowel in French?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'B', 'quiz3')">A. A</li>
+                    <li onclick="checkAnswer(this, 'B', 'quiz3')">B. B</li>
+                    <li onclick="checkAnswer(this, 'E', 'quiz3')">C. E</li>
+                    <li onclick="checkAnswer(this, 'I', 'quiz3')">D. I</li>
+                    <li onclick="checkAnswer(this, 'O', 'quiz3')">E. O</li>
+                </ul>
+                <div class="result" id="result-quiz3"></div>
             </div>
 
-            <div class="question">
-                <p>4. Which of the following is the French word for "Goodbye"?</p>
-                <label><input type="radio" name="q4" value="A"> A) Hola</label>
-                <label><input type="radio" name="q4" value="B"> B) Salut</label>
-                <label><input type="radio" name="q4" value="C"> C) Au revoir</label>
-                <label><input type="radio" name="q4" value="D"> D) Ciao</label>
-                <label><input type="radio" name="q4" value="E"> E) Adiós</label>
+            <!-- Quiz 4 -->
+            <div class="quiz" id="quiz4">
+                <h3>Quiz 4: What is the fourth letter of the French alphabet?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'A', 'quiz4')">A. A</li>
+                    <li onclick="checkAnswer(this, 'B', 'quiz4')">B. B</li>
+                    <li onclick="checkAnswer(this, 'C', 'quiz4')">C. C</li>
+                    <li onclick="checkAnswer(this, 'D', 'quiz4')">D. D</li>
+                    <li onclick="checkAnswer(this, 'E', 'quiz4')">E. E</li>
+                </ul>
+                <div class="result" id="result-quiz4"></div>
             </div>
 
-            <div class="question">
-                <p>5. What is the French word for "Please"?</p>
-                <label><input type="radio" name="q5" value="A"> A) Por favor</label>
-                <label><input type="radio" name="q5" value="B"> B) Bitte</label>
-                <label><input type="radio" name="q5" value="C"> C) Per favore</label>
-                <label><input type="radio" name="q5" value="D"> D) S'il vous plaît</label>
-                <label><input type="radio" name="q5" value="E"> E) Proszę</label>
+            <!-- Quiz 5 -->
+            <div class="quiz" id="quiz5">
+                <h3>Quiz 5: Which letter comes last in the French alphabet?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'Y', 'quiz5')">A. Y</li>
+                    <li onclick="checkAnswer(this, 'Z', 'quiz5')">B. Z</li>
+                    <li onclick="checkAnswer(this, 'X', 'quiz5')">C. X</li>
+                    <li onclick="checkAnswer(this, 'W', 'quiz5')">D. W</li>
+                    <li onclick="checkAnswer(this, 'V', 'quiz5')">E. V</li>
+                </ul>
+                <div class="result" id="result-quiz5"></div>
             </div>
 
-            <div class="question">
-                <p>6. How do you say "Yes" in French?</p>
-                <label><input type="radio" name="q6" value="A"> A) Oui</label>
-                <label><input type="radio" name="q6" value="B"> B) Ja</label>
-                <label><input type="radio" name="q6" value="C"> C) Si</label>
-                <label><input type="radio" name="q6" value="D"> D) Yes</label>
-                <label><input type="radio" name="q6" value="E"> E) Da</label>
+            <!-- Quiz 6 -->
+            <div class="quiz" id="quiz6">
+                <h3>Quiz 6: What is the French letter for 'F'?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'F', 'quiz6')">A. E</li>
+                    <li onclick="checkAnswer(this, 'F', 'quiz6')">B. F</li>
+                    <li onclick="checkAnswer(this, 'G', 'quiz6')">C. G</li>
+                    <li onclick="checkAnswer(this, 'H', 'quiz6')">D. H</li>
+                    <li onclick="checkAnswer(this, 'I', 'quiz6')">E. I</li>
+                </ul>
+                <div class="result" id="result-quiz6"></div>
             </div>
 
-            <div class="question">
-                <p>7. What does "Non" mean in French?</p>
-                <label><input type="radio" name="q7" value="A"> A) Yes</label>
-                <label><input type="radio" name="q7" value="B"> B) No</label>
-                <label><input type="radio" name="q7" value="C"> C) Maybe</label>
-                <label><input type="radio" name="q7" value="D"> D) Please</label>
-                <label><input type="radio" name="q7" value="E"> E) Thank you</label>
+            <!-- Quiz 7 -->
+            <div class="quiz" id="quiz7">
+                <h3>Quiz 7: Which of these letters is a vowel in French?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'J', 'quiz7')">A. J</li>
+                    <li onclick="checkAnswer(this, 'K', 'quiz7')">B. K</li>
+                    <li onclick="checkAnswer(this, 'L', 'quiz7')">C. L</li>
+                    <li onclick="checkAnswer(this, 'M', 'quiz7')">D. M</li>
+                    <li onclick="checkAnswer(this, 'E', 'quiz7')">E. E</li>
+                </ul>
+                <div class="result" id="result-quiz7"></div>
             </div>
 
-            <div class="question">
-                <p>8. Which of the following means "How are you?" in French?</p>
-                <label><input type="radio" name="q8" value="A"> A) ¿Cómo estás?</label>
-                <label><input type="radio" name="q8" value="B"> B) Wie geht es Ihnen?</label>
-                <label><input type="radio" name="q8" value="C"> C) Come stai?</label>
-                <label><input type="radio" name="q8" value="D"> D) Comment ça va?</label>
-                <label><input type="radio" name="q8" value="E"> E) Cum ești?</label>
+            <!-- Quiz 8 -->
+            <div class="quiz" id="quiz8">
+                <h3>Quiz 8: What is the letter 'C' in French?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'B', 'quiz8')">A. B</li>
+                    <li onclick="checkAnswer(this, 'C', 'quiz8')">B. C</li>
+                    <li onclick="checkAnswer(this, 'D', 'quiz8')">C. D</li>
+                    <li onclick="checkAnswer(this, 'E', 'quiz8')">D. E</li>
+                    <li onclick="checkAnswer(this, 'F', 'quiz8')">E. F</li>
+                </ul>
+                <div class="result" id="result-quiz8"></div>
             </div>
 
-            <div class="question">
-                <p>9. What is the French word for "Good morning"?</p>
-                <label><input type="radio" name="q9" value="A"> A) Buongiorno</label>
-                <label><input type="radio" name="q9" value="B"> B) Guten Morgen</label>
-                <label><input type="radio" name="q9" value="C"> C) Buenos días</label>
-                <label><input type="radio" name="q9" value="D"> D) Bon matin</label>
-                <label><input type="radio" name="q9" value="E"> E) Bonjour</label>
+            <!-- Quiz 9 -->
+            <div class="quiz" id="quiz9">
+                <h3>Quiz 9: Which letter comes before 'H' in French?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'G', 'quiz9')">A. G</li>
+                    <li onclick="checkAnswer(this, 'F', 'quiz9')">B. F</li>
+                    <li onclick="checkAnswer(this, 'H', 'quiz9')">C. H</li>
+                    <li onclick="checkAnswer(this, 'I', 'quiz9')">D. I</li>
+                    <li onclick="checkAnswer(this, 'J', 'quiz9')">E. J</li>
+                </ul>
+                <div class="result" id="result-quiz9"></div>
             </div>
 
-            <div class="question">
-                <p>10. How do you say "I'm fine, thank you" in French?</p>
-                <label><input type="radio" name="q10" value="A"> A) Estoy bien, gracias</label>
-                <label><input type="radio" name="q10" value="B"> B) Je vais bien, merci</label>
-                <label><input type="radio" name="q10" value="C"> C) Ich bin gut, danke</label>
-                <label><input type="radio" name="q10" value="D"> D) Sto bene, grazie</label>
-                <label><input type="radio" name="q10" value="E"> E) Eu sunt bine, mulțumesc</label>
+            <!-- Quiz 10 -->
+            <div class="quiz" id="quiz10">
+                <h3>Quiz 10: Which letter is between 'P' and 'R'?</h3>
+                <ul>
+                    <li onclick="checkAnswer(this, 'O', 'quiz10')">A. O</li>
+                    <li onclick="checkAnswer(this, 'Q', 'quiz10')">B. Q</li>
+                    <li onclick="checkAnswer(this, 'P', 'quiz10')">C. P</li>
+                    <li onclick="checkAnswer(this, 'R', 'quiz10')">D. R</li>
+                    <li onclick="checkAnswer(this, 'S', 'quiz10')">E. S</li>
+                </ul>
+                <div class="result" id="result-quiz10"></div>
             </div>
-
-            <button type="button" onclick="checkAnswers()">Submit Quiz</button>
-        </form>
-        <div id="quizFeedback"></div>
+        </div>
     </section>
 
-    <section class="assignment-section">
-        <h2>Assignment: Write a short paragraph introducing yourself in French, using the phrases you have learned from the video lecture so far. Be sure to include your name, age, place of origin, where you live, and the languages you speak </h2>
-        <p>Please submit your assignment through the link below: </p>
-        <p><a href="mailto:yourstudybuddy303@gmail.com" class="assignment-link">yourstudybuddy303@gmail.com</a></p>
-        <p>If the link above does not work, manually send the email to: <strong>yourstudybuddy303@gmail.com</strong></p>
+    <section id="assignment-section">
+        <h2>Assignment</h2>
+        <p>Submit your assignment: List the French alphabets in order.</p>
+        <a href="mailto:yourstudybuddy303@gmail.com">Submit Assignment via Email</a>
+        <p>If the link doesn't work, send your assignment to <strong>yourstudybuddy303@gmail.com</strong>.</p>
     </section>
 
-<section class="donation-section">
-        <h2>Support Our Work</h2>
+    <section id="donation-section">
+        <h2>Support Us</h2>
         <p>PLEASE DONATE</p>
-        
-        <div class="donation-details">
-            <div class="donation-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GTBank_logo.svg/768px-GTBank_logo.svg.png" alt="GTBank Logo" class="bank-logo">
+        <div class="donation-methods">
+            <div class="donation-method">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GTBank_logo.svg/768px-GTBank_logo.svg.png"
+                    alt="GTBank Logo">
                 <p>Account Number: 2032202001590</p>
             </div>
-            <div class="donation-item">
-                <img src="https://s.rfi.fr/media/display/ed44f02a-c239-11ec-b0fc-005056bf8594/w:1280/p:16x9/wave-senegal-mobile-money.png" alt="Wave Mobile Logo" class="mobile-logo">
-                <p>Phone Number Account: 3709558</p>
+            <div class="donation-method">
+                <img src="https://s.rfi.fr/media/display/ed44f02a-c239-11ec-b0fc-005056bf8594/w:1280/p:16x9/wave-senegal-mobile-money.png"
+                    alt="Wave Mobile Logo">
+                <p>Phone Number: 3709558</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2024 French Learning Hub. All Rights Reserved.</p>
-     <p> we are not affiliated with alliance franco and no copyright infringement intended</p>
-         
+<footer>
+        <p><strong>Please Note: We are not affiliated with Alliance Française, and no copyright infringement is intended.</strong></p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
+
+        
+           
