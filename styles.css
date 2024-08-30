@@ -1,126 +1,125 @@
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-
-header {
-    background-color: #006699;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-
-.video-section, .quiz-section, .assignment-section, .donation-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.question {
-    margin-bottom: 20px;
-}
-
-.question p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-
-button {
-    background-color: #006699;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #005580;
-}
-
-
-#quizFeedback {
-    margin-top: 20px;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-#quizFeedback .correct {
-    color: green;
-    font-weight: bold;
-}
-
-#quizFeedback .incorrect {
-    color: red;
-    font-weight: bold;
-}
-
-
-.assignment-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #006699;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.assignment-link:hover {
-    background-color: #005580;
-}
-
-
-.donation-section h2 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.donation-section p {
-    text-align: center;
-    font-size: 1.2em;
     color: #333;
 }
 
-.donation-details {
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
     text-align: center;
-    margin-top: 20px;
 }
 
-.donation-item {
-    margin-bottom: 15px;
+h1 {
+    margin: 0;
 }
 
-.bank-logo, .mobile-logo {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto;
+section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.donation-item p {
+h2 {
+    color: #007bff;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.quiz-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.quiz {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quiz h3 {
+    margin-bottom: 10px;
+}
+
+.quiz ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz ul li {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz ul li:hover {
+    background: #0056b3;
+}
+
+.result {
     margin-top: 10px;
-    font-size: 1.1em;
-    color: #555;
+    font-weight: bold;
 }
 
+#assignment-section p {
+    margin: 5px 0;
+}
+
+#assignment-section a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#assignment-section a:hover {
+    background: #0056b3;
+}
+
+.donation-methods {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.donation-method {
+    text-align: center;
+}
+
+.donation-method img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
 
 footer {
-    background-color: #006699;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
     margin-top: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
+    font-weight: bold;
 }
