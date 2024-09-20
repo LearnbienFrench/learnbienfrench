@@ -1,20 +1,53 @@
-function checkAnswer(element, correctAnswer, quizId) {
-    const resultDiv = document.getElementById('result-' + quizId);
-    
-    if (element.innerText.startsWith(correctAnswer)) {
-        resultDiv.innerHTML = '<span style="color: green; font-size: 24px;">✔ Correct!</span>';
-    } else {
-        resultDiv.innerHTML = '<span style="color: red; font-size: 24px;">✖ Incorrect!</span>';
-    }
-    
-    // Disable further clicks on this quiz
-    const choices = element.parentElement.getElementsByTagName('li');
-    for (let i = 0; i < choices.length; i++) {
-        choices[i].style.pointerEvents = 'none';
-        if (choices[i].innerText.startsWith(correctAnswer)) {
-            choices[i].style.backgroundColor = '#28a745';
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let score = 0;
+    const totalQuestions = 5;
+
+    // Clear all previous feedback
+    document.querySelectorAll('.feedback').forEach(feedback => {
+        feedback.textContent = '';
+    });
+
+    // Correct answers for each question
+    const correctAnswers = {
+        q1: 'B',
+        q2: 'C',
+        q3: 'B',
+        q4: 'C',
+        q5: 'A'
+    };
+
+    // Check each question
+    for (let i = 1; i <= totalQuestions; i++) {
+        const questionName = 'q' + i;
+        const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+        const feedbackElement = document.getElementById(`feedback${i}`);
+
+        if (selectedOption) {
+            if (selectedOption.value === correctAnswers[questionName]) {
+                feedbackElement.textContent = '✔ Correct!';
+                feedbackElement.style.color = 'green';
+                score++;
+            } else {
+                feedbackElement.textContent = '✖ Incorrect!';
+                feedbackElement.style.color = 'red';
+            }
         } else {
-            choices[i].style.backgroundColor = '#dc3545';
+            feedbackElement.textContent = '✖ No answer selected!';
+            feedbackElement.style.color = 'red';
         }
+    }
+
+    alert(`Your score is ${score} out of ${totalQuestions}`);
+});
+
+function submitAssignment() {
+    const assignmentText = document.getElementById('assignmentInput').value;
+    if (assignmentText.trim() === "") {
+        alert("Please write something before submitting!");
+    } else {
+        alert("Your assignment has been submitted. Please send it to the email provided.");
+        document.getElementById('assignmentInput').value = ''; // Clear the textarea
     }
 }
