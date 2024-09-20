@@ -1,125 +1,86 @@
+General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
     color: #333;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
+h1, h2 {
     text-align: center;
 }
 
-h1 {
-    margin: 0;
+#lecture {
+    margin: 20px auto;
+    text-align: center;
 }
 
-section {
-    margin: 20px;
+#quiz {
+    margin: 20px auto;
     padding: 20px;
-    background: white;
+    max-width: 600px;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #007bff;
+.quiz-question {
+    margin-bottom: 20px;
 }
 
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+.feedback {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
-.quiz-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.quiz {
-    background: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.quiz h3 {
-    margin-bottom: 10px;
-}
-
-.quiz ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.quiz ul li {
-    background: #007bff;
-    color: white;
+button {
+    display: block;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.quiz ul li:hover {
-    background: #0056b3;
+button:hover {
+    background-color: #45a049;
 }
 
-.result {
-    margin-top: 10px;
-    font-weight: bold;
+/* Assignment Section */
+#assignment {
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-#assignment-section p {
-    margin: 5px 0;
-}
-
-#assignment-section a {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-#assignment-section a:hover {
-    background: #0056b3;
-}
-
-.donation-methods {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.donation-method {
-    text-align: center;
-}
-
-.donation-method img {
-    max-width: 150px;
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
+#assignment textarea {
+    width: 100%;
     padding: 10px;
-    background-color: #f8f9fa;
-    font-size: 14px;
-    border-top: 1px solid #ddd;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-footer p {
-    margin: 0;
-    color: #333;
-    font-weight: bold;
+/* Donation Section Styles */
+#donation {
+    text-align: center;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#donation img {
+    margin: 10px 0;
 }
