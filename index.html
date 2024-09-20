@@ -1,194 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Language Learning</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Introduction to Numbers (1-20)</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
-
 <body>
-    <header>
-        <h1>Learn French Alphabets</h1>
-    </header>
 
-    <section id="video-lecture">
-        <h2>Video Lecture</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YmYf4kw-8bo" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
+    <!-- Video Lecture Section -->
+    <section id="lecture">
+        <h1>Video Lecture: Introduction to Numbers (1-20)</h1>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/H2-REbL2OU0?si=FI5tAHAlRj2zJ8vC" 
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </section>
 
-    <section id="quiz-section">
-        <h2>Test Your Knowledge</h2>
-        <div class="quiz-container">
-            <!-- Quiz 1 -->
-            <div class="quiz" id="quiz1">
-                <h3>Quiz 1: What is the first letter of the French alphabet?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'A', 'quiz1')">A. A</li>
-                    <li onclick="checkAnswer(this, 'B', 'quiz1')">B. B</li>
-                    <li onclick="checkAnswer(this, 'C', 'quiz1')">C. C</li>
-                    <li onclick="checkAnswer(this, 'D', 'quiz1')">D. D</li>
-                    <li onclick="checkAnswer(this, 'E', 'quiz1')">E. E</li>
-                </ul>
-                <div class="result" id="result-quiz1"></div>
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Quiz: Numbers (1-20)</h2>
+        <form id="quizForm">
+            <div class="quiz-question">
+                <p>1. What number comes after 9?</p>
+                <input type="radio" name="q1" value="A"> A. 8<br>
+                <input type="radio" name="q1" value="B"> B. 10<br>
+                <input type="radio" name="q1" value="C"> C. 12<br>
+                <input type="radio" name="q1" value="D"> D. 20<br>
+                <span class="feedback" id="feedback1"></span>
             </div>
 
-            <!-- Quiz 2 -->
-            <div class="quiz" id="quiz2">
-                <h3>Quiz 2: What letter comes after 'A'?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'B', 'quiz2')">A. A</li>
-                    <li onclick="checkAnswer(this, 'B', 'quiz2')">B. B</li>
-                    <li onclick="checkAnswer(this, 'C', 'quiz2')">C. C</li>
-                    <li onclick="checkAnswer(this, 'D', 'quiz2')">D. D</li>
-                    <li onclick="checkAnswer(this, 'E', 'quiz2')">E. E</li>
-                </ul>
-                <div class="result" id="result-quiz2"></div>
+            <div class="quiz-question">
+                <p>2. What number comes before 15?</p>
+                <input type="radio" name="q2" value="A"> A. 12<br>
+                <input type="radio" name="q2" value="B"> B. 13<br>
+                <input type="radio" name="q2" value="C"> C. 14<br>
+                <input type="radio" name="q2" value="D"> D. 16<br>
+                <span class="feedback" id="feedback2"></span>
             </div>
 
-            <!-- Quiz 3 -->
-            <div class="quiz" id="quiz3">
-                <h3>Quiz 3: Which letter is not a vowel in French?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'B', 'quiz3')">A. A</li>
-                    <li onclick="checkAnswer(this, 'B', 'quiz3')">B. B</li>
-                    <li onclick="checkAnswer(this, 'E', 'quiz3')">C. E</li>
-                    <li onclick="checkAnswer(this, 'I', 'quiz3')">D. I</li>
-                    <li onclick="checkAnswer(this, 'O', 'quiz3')">E. O</li>
-                </ul>
-                <div class="result" id="result-quiz3"></div>
+            <div class="quiz-question">
+                <p>3. Which of the following is the number 17?</p>
+                <input type="radio" name="q3" value="A"> A. 15<br>
+                <input type="radio" name="q3" value="B"> B. 17<br>
+                <input type="radio" name="q3" value="C"> C. 19<br>
+                <input type="radio" name="q3" value="D"> D. 20<br>
+                <span class="feedback" id="feedback3"></span>
             </div>
 
-            <!-- Quiz 4 -->
-            <div class="quiz" id="quiz4">
-                <h3>Quiz 4: What is the fourth letter of the French alphabet?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'A', 'quiz4')">A. A</li>
-                    <li onclick="checkAnswer(this, 'B', 'quiz4')">B. B</li>
-                    <li onclick="checkAnswer(this, 'C', 'quiz4')">C. C</li>
-                    <li onclick="checkAnswer(this, 'D', 'quiz4')">D. D</li>
-                    <li onclick="checkAnswer(this, 'E', 'quiz4')">E. E</li>
-                </ul>
-                <div class="result" id="result-quiz4"></div>
+            <div class="quiz-question">
+                <p>4. How do you write "twelve" in digits?</p>
+                <input type="radio" name="q4" value="A"> A. 10<br>
+                <input type="radio" name="q4" value="B"> B. 11<br>
+                <input type="radio" name="q4" value="C"> C. 12<br>
+                <input type="radio" name="q4" value="D"> D. 13<br>
+                <span class="feedback" id="feedback4"></span>
             </div>
 
-            <!-- Quiz 5 -->
-            <div class="quiz" id="quiz5">
-                <h3>Quiz 5: Which letter comes last in the French alphabet?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'Y', 'quiz5')">A. Y</li>
-                    <li onclick="checkAnswer(this, 'Z', 'quiz5')">B. Z</li>
-                    <li onclick="checkAnswer(this, 'X', 'quiz5')">C. X</li>
-                    <li onclick="checkAnswer(this, 'W', 'quiz5')">D. W</li>
-                    <li onclick="checkAnswer(this, 'V', 'quiz5')">E. V</li>
-                </ul>
-                <div class="result" id="result-quiz5"></div>
+            <div class="quiz-question">
+                <p>5. What is the correct number sequence from 1 to 5?</p>
+                <input type="radio" name="q5" value="A"> A. 1, 2, 3, 4, 5<br>
+                <input type="radio" name="q5" value="B"> B. 5, 4, 3, 2, 1<br>
+                <input type="radio" name="q5" value="C"> C. 2, 3, 4, 5, 6<br>
+                <input type="radio" name="q5" value="D"> D. 3, 2, 1, 4, 5<br>
+                <span class="feedback" id="feedback5"></span>
             </div>
 
-            <!-- Quiz 6 -->
-            <div class="quiz" id="quiz6">
-                <h3>Quiz 6: What is the French letter for 'F'?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'F', 'quiz6')">A. E</li>
-                    <li onclick="checkAnswer(this, 'F', 'quiz6')">B. F</li>
-                    <li onclick="checkAnswer(this, 'G', 'quiz6')">C. G</li>
-                    <li onclick="checkAnswer(this, 'H', 'quiz6')">D. H</li>
-                    <li onclick="checkAnswer(this, 'I', 'quiz6')">E. I</li>
-                </ul>
-                <div class="result" id="result-quiz6"></div>
-            </div>
-
-            <!-- Quiz 7 -->
-            <div class="quiz" id="quiz7">
-                <h3>Quiz 7: Which of these letters is a vowel in French?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'J', 'quiz7')">A. J</li>
-                    <li onclick="checkAnswer(this, 'K', 'quiz7')">B. K</li>
-                    <li onclick="checkAnswer(this, 'L', 'quiz7')">C. L</li>
-                    <li onclick="checkAnswer(this, 'M', 'quiz7')">D. M</li>
-                    <li onclick="checkAnswer(this, 'E', 'quiz7')">E. E</li>
-                </ul>
-                <div class="result" id="result-quiz7"></div>
-            </div>
-
-            <!-- Quiz 8 -->
-            <div class="quiz" id="quiz8">
-                <h3>Quiz 8: What is the letter 'C' in French?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'B', 'quiz8')">A. B</li>
-                    <li onclick="checkAnswer(this, 'C', 'quiz8')">B. C</li>
-                    <li onclick="checkAnswer(this, 'D', 'quiz8')">C. D</li>
-                    <li onclick="checkAnswer(this, 'E', 'quiz8')">D. E</li>
-                    <li onclick="checkAnswer(this, 'F', 'quiz8')">E. F</li>
-                </ul>
-                <div class="result" id="result-quiz8"></div>
-            </div>
-
-            <!-- Quiz 9 -->
-            <div class="quiz" id="quiz9">
-                <h3>Quiz 9: Which letter comes before 'H' in French?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'G', 'quiz9')">A. G</li>
-                    <li onclick="checkAnswer(this, 'F', 'quiz9')">B. F</li>
-                    <li onclick="checkAnswer(this, 'H', 'quiz9')">C. H</li>
-                    <li onclick="checkAnswer(this, 'I', 'quiz9')">D. I</li>
-                    <li onclick="checkAnswer(this, 'J', 'quiz9')">E. J</li>
-                </ul>
-                <div class="result" id="result-quiz9"></div>
-            </div>
-
-            <!-- Quiz 10 -->
-            <div class="quiz" id="quiz10">
-                <h3>Quiz 10: Which letter is between 'P' and 'R'?</h3>
-                <ul>
-                    <li onclick="checkAnswer(this, 'O', 'quiz10')">A. O</li>
-                    <li onclick="checkAnswer(this, 'Q', 'quiz10')">B. Q</li>
-                    <li onclick="checkAnswer(this, 'P', 'quiz10')">C. P</li>
-                    <li onclick="checkAnswer(this, 'R', 'quiz10')">D. R</li>
-                    <li onclick="checkAnswer(this, 'S', 'quiz10')">E. S</li>
-                </ul>
-                <div class="result" id="result-quiz10"></div>
-            </div>
-        </div>
+            <button type="submit">Submit Quiz</button>
+        </form>
     </section>
 
-    <section id="assignment-section">
+    <!-- Assignment Section -->
+    <section id="assignment">
         <h2>Assignment</h2>
-        <p>Submit your assignment: List the French alphabets in order.</p>
-        <a href="mailto:yourstudybuddy303@gmail.com">Submit Assignment via Email</a>
-        <p>If the link doesn't work, send your assignment to <strong>yourstudybuddy303@gmail.com</strong>.</p>
+        <p><strong>Assignment Question:</strong></p>
+        <p>Write out the numbers 1 to 20 in French and practice counting aloud. Create a simple math quiz using these numbers, and solve it both verbally and in writing.</p>
+        <p>Please submit your assignment by sending an email to: <a href="mailto:learnbienfrench@gmail.com"> learnbienfrench@gmail.com </a></p>
+        <p>If the link does not work, send your assignment manually to: learnbienfrench@gmail.com </p>
+        <textarea id="assignmentInput" rows="6" placeholder="Write your assignment here..."></textarea>
+        <button id="submitAssignment" onclick="submitAssignment()">Submit Assignment</button>
     </section>
 
-    <section id="donation-section">
-        <h2>Support Us</h2>
-        <p>PLEASE DONATE</p>
-        <div class="donation-methods">
-            <div class="donation-method">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GTBank_logo.svg/768px-GTBank_logo.svg.png"
-                    alt="GTBank Logo">
-                <p>Account Number: 2032202001590</p>
-            </div>
-            <div class="donation-method">
-                <img src="https://s.rfi.fr/media/display/ed44f02a-c239-11ec-b0fc-005056bf8594/w:1280/p:16x9/wave-senegal-mobile-money.png"
-                    alt="Wave Mobile Logo">
-                <p>Phone Number: 3709558</p>
-            </div>
-        </div>
+    <!-- Donation Section -->
+    <section id="donation">
+        <h2>PLEASE DONATE</h2>
+        <p>Account Number: 2032202001590</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GTBank_logo.svg/768px-GTBank_logo.svg.png" alt="GTBank Logo" width="150">
+        <p>Wave Mobile: 3709558</p>
+        <img src="https://s.rfi.fr/media/display/ed44f02a-c239-11ec-b0fc-005056bf8594/w:1280/p:16x9/wave-senegal-mobile-money.png" alt="Wave Mobile Logo" width="150">
     </section>
 
-<footer>
-        <p><strong>Please Note: We are not affiliated with Alliance Française, and no copyright infringement is intended.</strong></p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to external JS file -->
 </body>
-
 </html>
-
-        
-           
