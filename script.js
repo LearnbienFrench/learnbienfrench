@@ -13,9 +13,9 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
     const correctAnswers = {
         q1: 'A',
         q2: 'B',
-        q3: 'C',
-        q4: 'D',
-        q5: 'A'
+        q3: 'D',
+        q4: 'B',
+        q5: 'B'
     };
 
     // Check each question
